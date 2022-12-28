@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectpackage.ChicagoPizzaController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="271.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="56.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="273.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="188.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="91.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <RadioButton mnemonicParsing="false" onAction="#disableToppings" selected="true" text="Deluxe">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pizzaTypes" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#disableToppings" text="BBQ Chicken" toggleGroup="$pizzaTypes" />
+            <RadioButton mnemonicParsing="false" onAction="#disableToppings" text="Meatzza" toggleGroup="$pizzaTypes" />
+            <RadioButton mnemonicParsing="false" onAction="#enableToppings" text="Build Your Own" toggleGroup="$pizzaTypes" />
+         </children>
+      </VBox>
+      <ImageView fx:id="pizzaView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+      <ListView fx:id="toppingsList" disable="true" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <ListView fx:id="selectedList" disable="true" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <ComboBox fx:id="pizzaSizes" onAction="#displayPizza" prefWidth="150.0" promptText="Pick a size" visibleRowCount="3" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <Button fx:id="addButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#addToppings" text="Add -&gt;" />
+            <Button fx:id="removeButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#removeToppings" text="&lt;- Remove" />
+         </children>
+      </VBox>
+      <TextArea fx:id="outputText" editable="false" prefHeight="200.0" prefWidth="273.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#addOrder" text="Add To Order" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
