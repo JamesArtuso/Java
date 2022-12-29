@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Project5</string>
+    <string name="back">BACK</string>
+    <string name="order">Order</string>
+    <string name="clear">Clear</string>
+    <string name="view">View</string>
+    <string name="remove">remove</string>
+    <string name="add">add</string>
+    <string name="too_many">Too many toppings!</string>
+    <string name="pizza_ordered">Pizza Ordered!</string>
+    <string name="cleared">Cleared!</string>
+    <string name="removed">Removed!</string>
+    <string name="ordered">Ordered!</string>
+    <string name="pizzaImageDescription">An image of the pizza.</string>
+    <string name="storeImageDescription">An image of a store</string>
+    <string name="NYImageDescription">An image of NY</string>
+    <string name="ChicagoImageDescription">An image of Chicago</string>
+    <string name="currentImageDescription">An image of a shopping cart</string>
+    <string name="toppingImageDescription">An image of the topping</string>
+    <string name="sizeSpinnerDescription">A list of sizes</string>
+</resources>
